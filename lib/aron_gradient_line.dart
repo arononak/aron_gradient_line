@@ -2,6 +2,9 @@ library aron_gradient_line;
 
 import 'package:flutter/material.dart';
 
+/// Creates a AronGradientLine.
+///
+/// This class creates an instance of [StatefulWidget].
 class AronGradientLine extends StatefulWidget {
   final Duration duration;
   final double height;
