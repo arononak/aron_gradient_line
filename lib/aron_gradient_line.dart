@@ -36,7 +36,8 @@ class AronGradientLine extends StatefulWidget {
   State createState() => _AronGradientLineState();
 }
 
-class _AronGradientLineState extends State<AronGradientLine> with SingleTickerProviderStateMixin {
+class _AronGradientLineState extends State<AronGradientLine>
+    with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _animation;
 
@@ -53,7 +54,8 @@ class _AronGradientLineState extends State<AronGradientLine> with SingleTickerPr
         }
       });
 
-    _animation = Tween(begin: 0.0, end: widget.colors.length.toDouble() - 1).animate(_controller);
+    _animation = Tween(begin: 0.0, end: widget.colors.length.toDouble() - 1)
+        .animate(_controller);
 
     _controller.forward();
   }
