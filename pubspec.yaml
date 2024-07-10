@@ -1,7 +1,10 @@
 name: aron_gradient_line
 description: "Animate gradient line widget"
 version: 1.0.0
-homepage:
+homepage: https://aroncode.com
+repository: https://github.com/arononak/aron_gradient_line
+issue_tracker: https://github.com/arononak/aron_gradient_line/issues
+license: MIT
 
 environment:
   sdk: '>=3.4.3 <4.0.0'
