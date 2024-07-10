@@ -4,6 +4,7 @@ version: 1.0.0
 homepage: https://aroncode.com
 repository: https://github.com/arononak/aron_gradient_line
 issue_tracker: https://github.com/arononak/aron_gradient_line/issues
+documentation: https://arononak.github.io/aron_gradient_line/doc/api/index.html
 license: MIT
 
 environment:
