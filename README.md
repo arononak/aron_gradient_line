@@ -22,7 +22,9 @@ AppBar(
   title: Text(widget.title),
   bottom: const PreferredSize(
     preferredSize: Size.fromHeight(4.0),
-    child: AronGradientLine(),
+    child: AronGradientLine(
+      useMaterial3: true,
+    ),
   ),
 ),
 ```
