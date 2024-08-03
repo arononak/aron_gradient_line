@@ -9,3 +9,7 @@
 ## 1.1.0
 
 * Added `useMaterial3` field
+
+## 1.1.1
+
+* README.md & docs update
