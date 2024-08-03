@@ -9,6 +9,7 @@ class AronGradientLine extends StatefulWidget {
   final Duration duration;
   final double height;
   final List<Color> colors;
+  final bool useMaterial3;
 
   const AronGradientLine({
     super.key,
@@ -23,17 +24,8 @@ class AronGradientLine extends StatefulWidget {
       Colors.indigo,
       Colors.purple,
     ],
+    this.useMaterial3 = false,
   });
-
-  Color interpolateColor(double value) {
-    final index1 = value.floor();
-    final index2 = value.ceil();
-    final fraction = value - index1;
-    final color1 = colors[index1 % colors.length];
-    final color2 = colors[index2 % colors.length];
-
-    return Color.lerp(color1, color2, fraction)!;
-  }
 
   @override
   State createState() => _AronGradientLineState();
@@ -57,9 +49,9 @@ class _AronGradientLineState extends State<AronGradientLine>
         }
       });
 
-    _animation = Tween(begin: 0.0, end: widget.colors.length.toDouble() - 1)
-        .animate(_controller);
-
+    final end =
+        widget.useMaterial3 ? 3.0 - 1 : widget.colors.length.toDouble() - 1;
+    _animation = Tween(begin: 0.0, end: end).animate(_controller);
     _controller.forward();
   }
 
@@ -70,8 +62,8 @@ class _AronGradientLineState extends State<AronGradientLine>
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            widget.interpolateColor(_animation.value),
-            widget.interpolateColor(_animation.value + 1),
+            interpolateColor(_animation.value),
+            interpolateColor(_animation.value + 1),
           ],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
@@ -84,5 +76,23 @@ class _AronGradientLineState extends State<AronGradientLine>
   void dispose() {
     _controller.dispose();
     super.dispose();
+  }
+
+  Color interpolateColor(double value) {
+    final colors = widget.useMaterial3 == false
+        ? widget.colors
+        : [
+            Theme.of(context).colorScheme.primary,
+            Theme.of(context).colorScheme.secondary,
+            Theme.of(context).colorScheme.tertiary,
+          ];
+
+    final index1 = value.floor();
+    final index2 = value.ceil();
+    final fraction = value - index1;
+    final color1 = colors[index1 % colors.length];
+    final color2 = colors[index2 % colors.length];
+
+    return Color.lerp(color1, color2, fraction)!;
   }
 }
