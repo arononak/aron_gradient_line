@@ -5,7 +5,7 @@ Animate gradient line widget
 [![Latest Tag](https://img.shields.io/github/v/tag/arononak/aron_gradient_line?style=flat&logo=github&labelColor=black&color=white)](https://github.com/arononak/aron_gradient_line/tags)
 [![GitHub stars](https://img.shields.io/github/stars/arononak/aron_gradient_line.svg?style=flat&label=Star&labelColor=black&color=white)](https://github.com/arononak/aron_gradient_line/)
 [![Commits](https://img.shields.io/github/commit-activity/m/arononak/aron_gradient_line?style=flat&labelColor=black&color=white)](https://github.com/arononak/aron_gradient_line/graphs/contributors)
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/arononak/aron_gradient_line/.github%2Fworkflows%2Fpublish.yml?style=flat&labelColor=black&color=white)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/arononak/aron_gradient_line/.github%2Fworkflows%2Fdeploy.yml?style=flat&labelColor=black&color=white)
 
 [![Pub Package](https://img.shields.io/pub/v/aron_gradient_line.svg?style=flat&logo=dart&labelColor=fuchsia&color=white)](https://pub.dev/packages/aron_gradient_line)
 [![Likes](https://img.shields.io/pub/likes/aron_gradient_line?style=flat&labelColor=fuchsia&color=white)](https://pub.dev/packages/aron_gradient_line)

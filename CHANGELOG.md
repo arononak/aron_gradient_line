@@ -13,3 +13,7 @@
 ## 1.1.1
 
 * README.md & docs update
+
+## 1.1.2
+
+* README.md & docs update
